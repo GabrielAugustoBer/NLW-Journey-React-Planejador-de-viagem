@@ -1,8 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: '/NLW-Journey-React-Planejador-de-viagem/',
-})
+  base: '/NLW-Journey-React-Planejador-de-viagem/', // Substitua 'nome-do-repositorio' pelo nome real do seu repositório
+});
