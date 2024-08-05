@@ -1,11 +1,12 @@
 import { MapPin, Calendar, ArrowRight, UserRoundPlus, Settings2, X, AtSign, Plus } from "lucide-react"
 import { FormEvent, useState } from "react"
+import logo from './logo.svg';
 
 export function App() {
   const [isGuestsInputOpen, setIsGuestsInputOpen] = useState(false)
   const [isGuestsModalOpen, setIsGuestsModalOpen] = useState(false)
   const [emailsToInvite, setEmailsToInvite] = useState([
-    'diego@rocketseat.com'
+    'you@email.com'
   ])
 
   function openGuestsInput() {
@@ -57,7 +58,7 @@ export function App() {
     <div className="h-screen flex items-center justify-center bg-pattern bg-no-repeat bg-center">
       <div className="max-w-3xl w-full px-6 text-center space-y-10">
         <div className="flex flex-col items-center gap-3">
-          <img className="bg-logo" src="/logo.svg" alt="plann.er"/>
+          <img src={logo} alt="Logo" />
           <p className="text-zinc-300 text-lg">Convide seus amigos e planeje sua próxima viagem!</p>
         </div>
 
@@ -65,12 +66,14 @@ export function App() {
             <div className="h-16 bg-zinc-900 px-4 rounded-xl flex items-center shadow-shape gap-3">
             <div className="flex items-center gap-2 flex-1">
               <MapPin className="size-5 text-zinc-400"/>
-              <input disabled={isGuestsInputOpen} type="text" placeholder="Para onde você vai?" className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1"/>
+              <input disabled={isGuestsInputOpen} type="text" placeholder="Para onde você vai?" 
+              className="bg-transparent text-lg placeholder-zinc-400 outline-none flex-1"/>
             </div>
            
             <div className="flex items-center gap-2">
               <Calendar className="size-5 text-zinc-400"/>
-              <input disabled={isGuestsInputOpen} type="text" placeholder="Quando?" className="bg-transparent text-lg placeholder-zinc-400 w-40 outline-none"/>
+              <input disabled={isGuestsInputOpen} type="text" placeholder="Quando?" 
+              className="bg-transparent text-lg placeholder-zinc-400 w-40 outline-none"/>
             </div>
 
            <div className="w-px h-6 bg-zinc-800"/> 

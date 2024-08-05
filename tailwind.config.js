@@ -14,6 +14,7 @@ export default {
       },
       backgroundImage: {
         pattern: 'url(/bg.png)',
+        logo: 'url(/logo.png)',
       },
     },
   },
